@@ -1,0 +1,2 @@
+# appGenesis
+for smaller apps 
