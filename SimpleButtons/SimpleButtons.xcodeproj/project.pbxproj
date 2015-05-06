@@ -77,11 +77,8 @@
 		E8042F911AF7F38A008E1ADC /* SimpleButtons */ = {
 			isa = PBXGroup;
 			children = (
-				E8042F941AF7F38A008E1ADC /* AppDelegate.swift */,
 				E8042F961AF7F38A008E1ADC /* ViewController.swift */,
 				E8042F981AF7F38A008E1ADC /* Main.storyboard */,
-				E8042F9B1AF7F38A008E1ADC /* Images.xcassets */,
-				E8042F9D1AF7F38A008E1ADC /* LaunchScreen.xib */,
 				E8042F921AF7F38A008E1ADC /* Supporting Files */,
 			);
 			path = SimpleButtons;
@@ -90,6 +87,9 @@
 		E8042F921AF7F38A008E1ADC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8042F941AF7F38A008E1ADC /* AppDelegate.swift */,
+				E8042F9B1AF7F38A008E1ADC /* Images.xcassets */,
+				E8042F9D1AF7F38A008E1ADC /* LaunchScreen.xib */,
 				E8042F931AF7F38A008E1ADC /* Info.plist */,
 			);
 			name = "Supporting Files";
