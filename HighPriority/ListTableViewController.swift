@@ -36,6 +36,9 @@ class ListTableViewController: UITableViewController {
     @IBAction func lowPriorityClick(sender: PButton) {
         pNumber = 2
     }
+    
+    
+
    
     var pNumber: Int = 0
     var listItems: [[String:AnyObject]] = [
@@ -74,6 +77,7 @@ class ListTableViewController: UITableViewController {
         ]
         
         
+        
         listItems.insert(itemInfo, atIndex: 0)
         clearText()
         //     itemNameField.delegate?.textFieldShouldClear!(itemNameField)
@@ -81,10 +85,14 @@ class ListTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+       
         
 //        highPriorityButton.layer.cornerRadius = highPriorityButton.bounds.size.width / 2
 

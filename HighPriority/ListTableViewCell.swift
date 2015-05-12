@@ -29,6 +29,10 @@ class ListTableViewCell: UITableViewCell {
             itemStrikeThrough.hidden = !(itemInfo["completed"] as! Bool)
             
             backgroundColor = priorityColors[itemInfo["priority"] as! Int]
+            
+            
+            
+            
         }
     }
     
