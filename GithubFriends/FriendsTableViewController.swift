@@ -10,7 +10,7 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
     
-    @IBOutlet weak var profilePicture: UIImageView!
+
    
     @IBOutlet weak var friendNameField: UITextField!
     
@@ -72,10 +72,18 @@ class FriendsTableViewController: UITableViewController {
                 
                 if let friendInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String: AnyObject] {
                 
-                println(friendInfo)
+                    println(friendInfo)
                 
-                friends.insert(friendInfo, atIndex: 0)
-                tableView.reloadData()
+                    if friendInfo["name"] != nil {
+                        
+                        friends.insert(friendInfo, atIndex: 0)
+                        tableView.reloadData()
+                   
+                    }
+                
+                
+                    
+               
                 
             }
             
@@ -112,6 +120,13 @@ class FriendsTableViewController: UITableViewController {
         
         cell.textLabel?.text = friends[indexPath.row]["name"] as? String
         // Configure the cell...
+        if let avatarURL = NSURL(string: friends[indexPath.row]["avatar_url"] as! String) {
+            let imageData = NSData(contentsOfURL: avatarURL)
+            
+            if let image = UIImage(data: imageData!) {
+                cell.imageView?.image = image
+            }
+        }
 
         return cell
     }
