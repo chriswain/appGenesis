@@ -49,7 +49,7 @@ class ListTableViewController: UITableViewController {
         
         [
             
-            "name" : "Get Rat Poison",
+            "name" : "Get Food",
             "timeCreated" : NSDate(),
             "priority" : 2,
             "completed" : false
@@ -58,6 +58,11 @@ class ListTableViewController: UITableViewController {
     ]
   
     @IBOutlet weak var itemNameField: UITextField!
+    
+    func clearText() {
+        itemNameField.editing.boolValue
+        itemNameField.clearsOnBeginEditing.boolValue
+    } // this sucks :(
    
     @IBAction func createItem(sender: AnyObject) {
         
@@ -68,13 +73,18 @@ class ListTableViewController: UITableViewController {
             "completed" : false
         ]
         
-        listItems.append(itemInfo)
+        
+        listItems.insert(itemInfo, atIndex: 0)
+        clearText()
+        //     itemNameField.delegate?.textFieldShouldClear!(itemNameField)
         
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
 //        highPriorityButton.layer.cornerRadius = highPriorityButton.bounds.size.width / 2
 
@@ -122,17 +132,18 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            listItems.removeAtIndex(pNumber)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
