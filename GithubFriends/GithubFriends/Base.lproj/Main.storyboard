@@ -52,6 +52,23 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PMk-tw-AL6" id="gTR-kx-YY3">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixH-ar-Hxc">
+                                            <rect key="frame" x="261" y="49" width="36" height="30"/>
+                                            <state key="normal" title="Gists">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-f6-P9A">
+                                            <rect key="frame" x="178" y="49" width="45" height="30"/>
+                                            <state key="normal" title="Repos">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="4si-xg-0bu" kind="show" id="w4k-96-aDa"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -70,23 +87,31 @@
             </objects>
             <point key="canvasLocation" x="1145" y="343"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="q4e-l0-qIn">
+        <!--Table View Controller-->
+        <scene sceneID="lJB-VH-At4">
             <objects>
-                <viewController id="YG4-f1-x3S" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sMO-jg-cZl"/>
-                        <viewControllerLayoutGuide type="bottom" id="og8-do-rBS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kCU-Ek-9es">
+                <tableViewController id="4si-xg-0bu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rrS-HQ-rVx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8wa-fc-lJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dfy-vy-rj1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfy-vy-rj1" id="IER-ls-haT">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4si-xg-0bu" id="J8x-1f-NVR"/>
+                            <outlet property="delegate" destination="4si-xg-0bu" id="4Er-rW-LDn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKu-SM-njv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="37"/>
+            <point key="canvasLocation" x="1809" y="22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p9e-m9-njL">
