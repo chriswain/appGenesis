@@ -17,6 +17,7 @@
 		E8F458531B038F030080ABFB /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458521B038F030080ABFB /* RepoTableViewCell.swift */; };
 		E8F458551B038F1D0080ABFB /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */; };
 		E8F458571B0397B00080ABFB /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458561B0397B00080ABFB /* GithubRequest.swift */; };
+		E8F458591B03AC390080ABFB /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458581B03AC390080ABFB /* AddFriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E8F458521B038F030080ABFB /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
 		E8F458561B0397B00080ABFB /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		E8F458581B03AC390080ABFB /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				E8F458521B038F030080ABFB /* RepoTableViewCell.swift */,
 				E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */,
 				E8F458561B0397B00080ABFB /* GithubRequest.swift */,
+				E8F458581B03AC390080ABFB /* AddFriendViewController.swift */,
 				E8F4582C1B0239160080ABFB /* Supporting Files */,
 			);
 			path = GithubFriends;
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F458571B0397B00080ABFB /* GithubRequest.swift in Sources */,
+				E8F458591B03AC390080ABFB /* AddFriendViewController.swift in Sources */,
 				E8F458511B0284320080ABFB /* ProfileTableViewCell.swift in Sources */,
 				E8F4584F1B0240230080ABFB /* FriendsTableViewController.swift in Sources */,
 				E8F4582F1B0239160080ABFB /* AppDelegate.swift in Sources */,

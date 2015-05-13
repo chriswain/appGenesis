@@ -155,11 +155,15 @@ class FriendsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "reposSegue" {
         var reposTVC = segue.destinationViewController as! ReposTableViewController
     
         var reposButton = sender as! UIButton
         
+       
         reposTVC.friendInfo = friends[reposButton.tag]
+        }
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
