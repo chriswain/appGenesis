@@ -1,54 +1,35 @@
 //
-//  FriendsTableViewController.swift
+//  ReposTableViewController.swift
 //  GithubFriends
 //
-//  Created by Christopher Wainwright Aaron on 5/12/15.
+//  Created by Christopher Wainwright Aaron on 5/13/15.
 //  Copyright (c) 2015 Chris Aaron. All rights reserved.
 //
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class ReposTableViewController: UITableViewController {
     
-
-   
-    @IBOutlet weak var friendNameField: UITextField!
+    var friendInfo: [String: AnyObject?]! {
+        
+        didSet {
+            
+            navigationItem.title = "REPOS"
+            navigationItem.prompt = friendInfo["name"] as? String
+            
+            let reposEndpoint = friendInfo["repos_url"] as! String
+            if let reposInfo = GithubRequest.getInfoWithEndpoiunt(reposEndpoint) as? [[String:AnyObject]] {
+            
+                repos = reposInfo
+                tableView.reloadData()
+                
+                
+            }
+            
+        }
+    }
+    var repos: [[String: AnyObject]] = []
     
-    var friends: [[String: AnyObject?]] = [
-        [
-            "login": "chriswain",
-            "id": 10687773,
-            "avatar_url": "https://avatars.githubusercontent.com/u/10687773?v=3",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/chriswain",
-            "html_url": "https://github.com/chriswain",
-            "followers_url": "https://api.github.com/users/chriswain/followers",
-            "following_url": "https://api.github.com/users/chriswain/following{/other_user}",
-            "gists_url": "https://api.github.com/users/chriswain/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/chriswain/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/chriswain/subscriptions",
-            "organizations_url": "https://api.github.com/users/chriswain/orgs",
-            "repos_url": "https://api.github.com/users/chriswain/repos",
-            "events_url": "https://api.github.com/users/chriswain/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/chriswain/received_events",
-            "type": "User",
-            "site_admin": false,
-            "name": "Christopher Aaron",
-            "company": "",
-            "blog": "",
-            "location": "",
-            "email": "",
-            "hireable": false,
-            "bio": nil,
-            "public_repos": 1,
-            "public_gists": 0,
-            "followers": 9,
-            "following": 9,
-            "created_at": "2015-01-24T19:09:02Z",
-            "updated_at": "2015-05-11T13:32:57Z"
-        ]
-]
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,31 +38,6 @@ class FriendsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    @IBAction func addFriend(sender: AnyObject) {
-     
-        let endpoint = "https://api.github.com/users/\(friendNameField.text)"
-        
-        println(endpoint)
-        
-        if let friendInfo = GithubRequest.getInfoWithEndpoiunt(endpoint) as? [String:AnyObject?] {
-            
-             println(friendInfo)
-            
-            
-            if friendInfo["name"] != nil {
-                
-                friends.insert(friendInfo, atIndex: 0)
-                tableView.reloadData()
-
-            }
-            
-        }
-       
-       
-        
-        
-        friendNameField.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,17 +56,18 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return friends.count
+        return repos.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! ProfileTableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! UITableViewCell
+
         // Configure the cell...
-        cell.friendIndex = indexPath.row
-        cell.friendInfo = friends[indexPath.row]
-                return cell
+        cell.textLabel?.text = repos[indexPath.row]["name"] as? String
+        
+
+        return cell
     }
     
 
@@ -122,18 +79,17 @@ class FriendsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            friends.removeAtIndex(indexPath.row)
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -150,19 +106,16 @@ class FriendsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var reposTVC = segue.destinationViewController as! ReposTableViewController
     
-        var reposButton = sender as! UIButton
-        
-        reposTVC.friendInfo = friends[reposButton.tag]
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    
+    */
+
 
 }

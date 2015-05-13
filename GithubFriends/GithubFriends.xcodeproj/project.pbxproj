@@ -14,6 +14,9 @@
 		E8F458451B0239160080ABFB /* GithubFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458441B0239160080ABFB /* GithubFriendsTests.swift */; };
 		E8F4584F1B0240230080ABFB /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4584E1B0240230080ABFB /* FriendsTableViewController.swift */; };
 		E8F458511B0284320080ABFB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458501B0284320080ABFB /* ProfileTableViewCell.swift */; };
+		E8F458531B038F030080ABFB /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458521B038F030080ABFB /* RepoTableViewCell.swift */; };
+		E8F458551B038F1D0080ABFB /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */; };
+		E8F458571B0397B00080ABFB /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F458561B0397B00080ABFB /* GithubRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		E8F458441B0239160080ABFB /* GithubFriendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFriendsTests.swift; sourceTree = "<group>"; };
 		E8F4584E1B0240230080ABFB /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewController.swift; path = ../FriendsTableViewController.swift; sourceTree = "<group>"; };
 		E8F458501B0284320080ABFB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewCell.swift; path = ../ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		E8F458521B038F030080ABFB /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
+		E8F458561B0397B00080ABFB /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				E8F458321B0239160080ABFB /* Main.storyboard */,
 				E8F4584E1B0240230080ABFB /* FriendsTableViewController.swift */,
 				E8F458501B0284320080ABFB /* ProfileTableViewCell.swift */,
+				E8F458521B038F030080ABFB /* RepoTableViewCell.swift */,
+				E8F458541B038F1D0080ABFB /* ReposTableViewController.swift */,
+				E8F458561B0397B00080ABFB /* GithubRequest.swift */,
 				E8F4582C1B0239160080ABFB /* Supporting Files */,
 			);
 			path = GithubFriends;
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F458571B0397B00080ABFB /* GithubRequest.swift in Sources */,
 				E8F458511B0284320080ABFB /* ProfileTableViewCell.swift in Sources */,
 				E8F4584F1B0240230080ABFB /* FriendsTableViewController.swift in Sources */,
 				E8F4582F1B0239160080ABFB /* AppDelegate.swift in Sources */,
+				E8F458531B038F030080ABFB /* RepoTableViewCell.swift in Sources */,
+				E8F458551B038F1D0080ABFB /* ReposTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

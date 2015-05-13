@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Friends Table View Controller-->
+        <!--My Friends-->
         <scene sceneID="Yke-2g-9Df">
             <objects>
                 <tableViewController id="d24-AO-Tqo" customClass="FriendsTableViewController" customModule="GithubFriends" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="4l3-Sf-1Cy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="4l3-Sf-1Cy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,19 +48,13 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="80" id="PMk-tw-AL6" customClass="ProfileTableViewCell" customModule="GithubFriends" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="PMk-tw-AL6" customClass="ProfileTableViewCell" customModule="GithubFriends" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PMk-tw-AL6" id="gTR-kx-YY3">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixH-ar-Hxc">
-                                            <rect key="frame" x="261" y="49" width="36" height="30"/>
-                                            <state key="normal" title="Gists">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-f6-P9A">
-                                            <rect key="frame" x="178" y="49" width="45" height="30"/>
+                                            <rect key="frame" x="105" y="49" width="129" height="42"/>
                                             <state key="normal" title="Repos">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -68,8 +62,29 @@
                                                 <segue destination="4si-xg-0bu" kind="show" id="w4k-96-aDa"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k9s-HC-uOq">
+                                            <rect key="frame" x="17" y="8" width="80" height="80"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-9Y-bNf">
+                                            <rect key="frame" x="173" y="8" width="151" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixH-ar-Hxc">
+                                            <rect key="frame" x="232" y="45" width="84" height="50"/>
+                                            <state key="normal" title="Gists">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="k9s-HC-uOq" id="PKG-dy-vFV"/>
+                                    <outlet property="friendNameLabel" destination="zhh-9Y-bNf" id="iun-ro-g62"/>
+                                    <outlet property="gistsButton" destination="ixH-ar-Hxc" id="zG5-DN-ihL"/>
+                                    <outlet property="reposButton" destination="KPh-f6-P9A" id="4yu-cL-0e6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -78,7 +93,7 @@
                             <outlet property="delegate" destination="d24-AO-Tqo" id="1D3-u6-AoV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="42h-0s-bGT"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="42h-0s-bGT"/>
                     <connections>
                         <outlet property="friendNameField" destination="5Km-Ro-Q9J" id="WFm-YW-MB2"/>
                     </connections>
@@ -87,16 +102,16 @@
             </objects>
             <point key="canvasLocation" x="1145" y="343"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Repos Table View Controller-->
         <scene sceneID="lJB-VH-At4">
             <objects>
-                <tableViewController id="4si-xg-0bu" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rrS-HQ-rVx">
+                <tableViewController id="4si-xg-0bu" customClass="ReposTableViewController" customModule="GithubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rrS-HQ-rVx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dfy-vy-rj1">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="100" id="dfy-vy-rj1" customClass="RepoTableViewCell" customModule="GithubFriends" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfy-vy-rj1" id="IER-ls-haT">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -111,7 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKu-SM-njv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="22"/>
+            <point key="canvasLocation" x="1904" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p9e-m9-njL">
@@ -121,6 +136,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r0T-Uy-FHi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.17647058823529413" green="0.82745098039215681" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="deviceRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
