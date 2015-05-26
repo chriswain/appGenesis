@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E804F5451B14AB1B0006EA43 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E804F5431B14AB1B0006EA43 /* Fabric.framework */; };
+		E804F5461B14AB1B0006EA43 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E804F5441B14AB1B0006EA43 /* Crashlytics.framework */; };
 		E8E9A5991B0E15EB00B488AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9A5981B0E15EB00B488AE /* AppDelegate.swift */; };
 		E8E9A59B1B0E15EB00B488AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9A59A1B0E15EB00B488AE /* ViewController.swift */; };
 		E8E9A59E1B0E15EB00B488AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E9A59C1B0E15EB00B488AE /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E804F5431B14AB1B0006EA43 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E804F5441B14AB1B0006EA43 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E8E9A5931B0E15EB00B488AE /* MyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9A5971B0E15EB00B488AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E9A5981B0E15EB00B488AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E804F5461B14AB1B0006EA43 /* Crashlytics.framework in Frameworks */,
+				E804F5451B14AB1B0006EA43 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E804F5421B14AAB70006EA43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E804F5431B14AB1B0006EA43 /* Fabric.framework */,
+				E804F5441B14AB1B0006EA43 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8E9A58A1B0E15EB00B488AE = {
 			isa = PBXGroup;
 			children = (
+				E804F5421B14AAB70006EA43 /* Frameworks */,
 				E8E9A5951B0E15EB00B488AE /* MyWorld */,
 				E8E9A5AB1B0E15EB00B488AE /* MyWorldTests */,
 				E8E9A5941B0E15EB00B488AE /* Products */,
@@ -122,6 +138,7 @@
 				E8E9A58F1B0E15EB00B488AE /* Sources */,
 				E8E9A5901B0E15EB00B488AE /* Frameworks */,
 				E8E9A5911B0E15EB00B488AE /* Resources */,
+				E804F5411B14AA690006EA43 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +223,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E804F5411B14AA690006EA43 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e604f5249fb512b7e43ba7b9a2695d4449459b75 267ca8038de17b44fc0228db54e8a61dfdf7d7b3db420c799672f1711c885fbb";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8E9A58F1B0E15EB00B488AE /* Sources */ = {
@@ -340,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +387,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +450,7 @@
 				E8E9A5B41B0E15EB00B488AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8E9A5B51B0E15EB00B488AE /* Build configuration list for PBXNativeTarget "MyWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +459,7 @@
 				E8E9A5B71B0E15EB00B488AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

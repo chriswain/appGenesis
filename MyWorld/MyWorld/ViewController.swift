@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Fabric
+import Crashlytics
 
 class MyAnnotation: MKPointAnnotation {
     
@@ -41,6 +43,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         navigationController?.navigationBar.barTintColor = UIColor(red:0.99, green:0.76, blue:0.21, alpha:1)
         
         navigationItem.title = "Venues"
+        
+        Crashlytics.sharedInstance().crash()
+        
+        
         
         
     }
@@ -182,33 +188,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         statsLabel.text = "Stats"
         statsLabel.textColor = UIColor.grayColor()
         
-        var statCircleUsers = UILabel(frame:CGRectMake(100, 320, 50, 50))
-        statCircleUsers.layer.cornerRadius = 25
-        statCircleUsers.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
-        statCircleUsers.clipsToBounds = true
-        statCircleUsers.textColor = UIColor.whiteColor()
+        
         
         var staticUsersLabel = UILabel(frame: CGRectMake(105, 380, 100, 20))
         staticUsersLabel.text = "USERS"
         staticUsersLabel.textColor = UIColor.grayColor()
         staticUsersLabel.font = UIFont(name: "helvetica neue", size: 12)
         
-        var statCircleCheckins = UILabel(frame: CGRectMake(160, 320, 50, 50))
-        statCircleCheckins.layer.cornerRadius = 25
-        statCircleCheckins.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
-        statCircleCheckins.clipsToBounds = true
-        statCircleCheckins.textColor = UIColor.whiteColor()
+        
         
         var staticCheckinsLabel = UILabel(frame: CGRectMake(160, 380, 100, 20))
         staticCheckinsLabel.text = "CHECKINS"
         staticCheckinsLabel.textColor = UIColor.grayColor()
         staticCheckinsLabel.font = UIFont(name: "helvetica neue", size: 12)
         
-        var statCircleTips = UILabel(frame: CGRectMake(220, 320, 50, 50))
-        statCircleTips.layer.cornerRadius = 25
-        statCircleTips.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
-        statCircleTips.clipsToBounds = true
-        statCircleTips.textColor = UIColor.whiteColor()
+        
         
         var staticTipsLabel = UILabel(frame: CGRectMake(233, 380, 100, 20))
         staticTipsLabel.text = "TIPS"
@@ -218,7 +212,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if let location = venue["location"] as? [String:AnyObject] {
             
             
-            var dynamicAddressLabel = UILabel(frame: CGRectMake(100, 200, 200, 40))
+            var dynamicAddressLabel = UILabel(frame: CGRectMake(100, 200, 400, 40))
             dynamicAddressLabel.text = location["address"] as? String
             
             detailVC.view.addSubview(dynamicAddressLabel)
@@ -227,7 +221,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if let categories = venue["categories"] as? [[String:AnyObject]] {
             
-            var dynamicCategoryLabel = UILabel(frame: CGRectMake(100, 100, 100, 40))
+            var dynamicCategoryLabel = UILabel(frame: CGRectMake(100, 100, 300, 40))
             let insideCategoriesArray = categories[0]
             let categoriesName: AnyObject? = insideCategoriesArray["name"]
             dynamicCategoryLabel.text = categoriesName as? String
@@ -236,21 +230,47 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         
         if let stats = venue["stats"] as? [String:AnyObject] {
-            statCircleUsers.text = stats["usersCount"] as? String
-            statCircleCheckins.text = stats["checkinsCount"] as? String
-            statCircleTips.text = stats["tipCount"] as? String
+            
+            var statCircleTips = UILabel(frame: CGRectMake(220, 320, 50, 50))
+            statCircleTips.layer.cornerRadius = 25
+            statCircleTips.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            statCircleTips.clipsToBounds = true
+            statCircleTips.textColor = UIColor.whiteColor()
+            
+            var statCircleCheckins = UILabel(frame: CGRectMake(160, 320, 50, 50))
+            statCircleCheckins.layer.cornerRadius = 25
+            statCircleCheckins.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            statCircleCheckins.clipsToBounds = true
+            statCircleCheckins.textColor = UIColor.whiteColor()
+            
+            var statCircleUsers = UILabel(frame:CGRectMake(100, 320, 50, 50))
+            statCircleUsers.layer.cornerRadius = 25
+            statCircleUsers.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            statCircleUsers.clipsToBounds = true
+            statCircleUsers.textColor = UIColor.whiteColor()
+            
+            var userCount = stats["usersCount"] as! Int
+            statCircleUsers.text = "\(userCount)"
+            var checkinsCount = stats["checkinsCount"] as! Int
+            statCircleCheckins.text = "\(checkinsCount)"
+            var tipCount = stats["tipCount"] as! Int
+            statCircleTips.text = "\(tipCount)"
+            
+            detailVC.view.addSubview(statCircleTips)
+            detailVC.view.addSubview(statCircleCheckins)
+            detailVC.view.addSubview(statCircleUsers)
+
         }
         
         detailVC.view.addSubview(statsLabel)
-        detailVC.view.addSubview(statCircleUsers)
+       
         detailVC.view.addSubview(staticUsersLabel)
-        detailVC.view.addSubview(statCircleCheckins)
-        detailVC.view.addSubview(staticCheckinsLabel)
-        detailVC.view.addSubview(statCircleTips)
+                detailVC.view.addSubview(staticCheckinsLabel)
+        
         detailVC.view.addSubview(staticTipsLabel)
         
         if let hereNow = venue["hereNow"] as? [String:AnyObject] {
-            var hereNowLabel = UILabel(frame: CGRectMake(100, 475, 150, 40))
+            var hereNowLabel = UILabel(frame: CGRectMake(100, 475, 300, 40))
             hereNowLabel.text = hereNow["summary"] as? String
             
             detailVC.view.addSubview(hereNowLabel)
