@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E87CF0781B17BE100063994C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF0771B17BE100063994C /* AppDelegate.swift */; };
+		E87CF07A1B17BE100063994C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF0791B17BE100063994C /* StartViewController.swift */; };
+		E87CF07D1B17BE100063994C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87CF07B1B17BE100063994C /* Main.storyboard */; };
+		E87CF07F1B17BE100063994C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87CF07E1B17BE100063994C /* Images.xcassets */; };
+		E87CF0821B17BE100063994C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E87CF0801B17BE100063994C /* LaunchScreen.xib */; };
+		E87CF08E1B17BE100063994C /* ParseLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF08D1B17BE100063994C /* ParseLoginTests.swift */; };
+		E87CF0991B17BE5F0063994C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0981B17BE5F0063994C /* Bolts.framework */; };
+		E87CF09D1B17BE980063994C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF09C1B17BE980063994C /* Parse.framework */; };
+		E87CF09F1B17C0400063994C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF09E1B17C0400063994C /* AudioToolbox.framework */; };
+		E87CF0A11B17C04B0063994C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0A01B17C04B0063994C /* CFNetwork.framework */; };
+		E87CF0A31B17C05F0063994C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0A21B17C05F0063994C /* CoreGraphics.framework */; };
+		E87CF0A51B17C0790063994C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0A41B17C0790063994C /* CoreLocation.framework */; };
+		E87CF0A71B17C0970063994C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0A61B17C0970063994C /* MobileCoreServices.framework */; };
+		E87CF0A91B17C0A20063994C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0A81B17C0A20063994C /* QuartzCore.framework */; };
+		E87CF0AB1B17C0BE0063994C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0AA1B17C0BE0063994C /* Security.framework */; };
+		E87CF0AD1B17C0C70063994C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0AC1B17C0C70063994C /* StoreKit.framework */; };
+		E87CF0AF1B17C0DA0063994C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0AE1B17C0DA0063994C /* SystemConfiguration.framework */; };
+		E87CF0B11B17C0FD0063994C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0B01B17C0FD0063994C /* libz.dylib */; };
+		E87CF0B31B17C10A0063994C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E87CF0B21B17C10A0063994C /* libsqlite3.dylib */; };
+		E87CF0B51B17C2770063994C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF0B41B17C2770063994C /* LoginViewController.swift */; };
+		E87CF0B71B17C2BE0063994C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF0B61B17C2BE0063994C /* SignUpViewController.swift */; };
+		E87CF0B91B180EC20063994C /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87CF0B81B180EC20063994C /* LogoutViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E87CF0881B17BE100063994C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E87CF06A1B17BE100063994C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E87CF0711B17BE100063994C;
+			remoteInfo = ParseLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E87CF0721B17BE100063994C /* ParseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87CF0761B17BE100063994C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87CF0771B17BE100063994C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E87CF0791B17BE100063994C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		E87CF07C1B17BE100063994C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E87CF07E1B17BE100063994C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E87CF0811B17BE100063994C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E87CF0871B17BE100063994C /* ParseLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87CF08C1B17BE100063994C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87CF08D1B17BE100063994C /* ParseLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLoginTests.swift; sourceTree = "<group>"; };
+		E87CF0981B17BE5F0063994C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E87CF09C1B17BE980063994C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E87CF09E1B17C0400063994C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E87CF0A01B17C04B0063994C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E87CF0A21B17C05F0063994C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E87CF0A41B17C0790063994C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E87CF0A61B17C0970063994C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E87CF0A81B17C0A20063994C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E87CF0AA1B17C0BE0063994C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E87CF0AC1B17C0C70063994C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E87CF0AE1B17C0DA0063994C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E87CF0B01B17C0FD0063994C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E87CF0B21B17C10A0063994C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E87CF0B41B17C2770063994C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E87CF0B61B17C2BE0063994C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E87CF0B81B180EC20063994C /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = ../LogoutViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E87CF06F1B17BE100063994C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87CF0B31B17C10A0063994C /* libsqlite3.dylib in Frameworks */,
+				E87CF0B11B17C0FD0063994C /* libz.dylib in Frameworks */,
+				E87CF0AF1B17C0DA0063994C /* SystemConfiguration.framework in Frameworks */,
+				E87CF0AD1B17C0C70063994C /* StoreKit.framework in Frameworks */,
+				E87CF0AB1B17C0BE0063994C /* Security.framework in Frameworks */,
+				E87CF0A91B17C0A20063994C /* QuartzCore.framework in Frameworks */,
+				E87CF0A71B17C0970063994C /* MobileCoreServices.framework in Frameworks */,
+				E87CF0A51B17C0790063994C /* CoreLocation.framework in Frameworks */,
+				E87CF0A31B17C05F0063994C /* CoreGraphics.framework in Frameworks */,
+				E87CF0A11B17C04B0063994C /* CFNetwork.framework in Frameworks */,
+				E87CF09F1B17C0400063994C /* AudioToolbox.framework in Frameworks */,
+				E87CF09D1B17BE980063994C /* Parse.framework in Frameworks */,
+				E87CF0991B17BE5F0063994C /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87CF0841B17BE100063994C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E87CF0691B17BE100063994C = {
+			isa = PBXGroup;
+			children = (
+				E87CF0741B17BE100063994C /* ParseLogin */,
+				E87CF08A1B17BE100063994C /* ParseLoginTests */,
+				E87CF0731B17BE100063994C /* Products */,
+				E87CF0971B17BE1D0063994C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E87CF0731B17BE100063994C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF0721B17BE100063994C /* ParseLogin.app */,
+				E87CF0871B17BE100063994C /* ParseLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E87CF0741B17BE100063994C /* ParseLogin */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF0771B17BE100063994C /* AppDelegate.swift */,
+				E87CF0791B17BE100063994C /* StartViewController.swift */,
+				E87CF0B61B17C2BE0063994C /* SignUpViewController.swift */,
+				E87CF0B41B17C2770063994C /* LoginViewController.swift */,
+				E87CF0B81B180EC20063994C /* LogoutViewController.swift */,
+				E87CF07B1B17BE100063994C /* Main.storyboard */,
+				E87CF0751B17BE100063994C /* Supporting Files */,
+			);
+			path = ParseLogin;
+			sourceTree = "<group>";
+		};
+		E87CF0751B17BE100063994C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF0761B17BE100063994C /* Info.plist */,
+				E87CF07E1B17BE100063994C /* Images.xcassets */,
+				E87CF0801B17BE100063994C /* LaunchScreen.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E87CF08A1B17BE100063994C /* ParseLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF08D1B17BE100063994C /* ParseLoginTests.swift */,
+				E87CF08B1B17BE100063994C /* Supporting Files */,
+			);
+			path = ParseLoginTests;
+			sourceTree = "<group>";
+		};
+		E87CF08B1B17BE100063994C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF08C1B17BE100063994C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E87CF0971B17BE1D0063994C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87CF0B21B17C10A0063994C /* libsqlite3.dylib */,
+				E87CF0B01B17C0FD0063994C /* libz.dylib */,
+				E87CF0AE1B17C0DA0063994C /* SystemConfiguration.framework */,
+				E87CF0AC1B17C0C70063994C /* StoreKit.framework */,
+				E87CF0AA1B17C0BE0063994C /* Security.framework */,
+				E87CF0A81B17C0A20063994C /* QuartzCore.framework */,
+				E87CF0A61B17C0970063994C /* MobileCoreServices.framework */,
+				E87CF0A41B17C0790063994C /* CoreLocation.framework */,
+				E87CF0A21B17C05F0063994C /* CoreGraphics.framework */,
+				E87CF0A01B17C04B0063994C /* CFNetwork.framework */,
+				E87CF09E1B17C0400063994C /* AudioToolbox.framework */,
+				E87CF09C1B17BE980063994C /* Parse.framework */,
+				E87CF0981B17BE5F0063994C /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E87CF0711B17BE100063994C /* ParseLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87CF0911B17BE100063994C /* Build configuration list for PBXNativeTarget "ParseLogin" */;
+			buildPhases = (
+				E87CF06E1B17BE100063994C /* Sources */,
+				E87CF06F1B17BE100063994C /* Frameworks */,
+				E87CF0701B17BE100063994C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParseLogin;
+			productName = ParseLogin;
+			productReference = E87CF0721B17BE100063994C /* ParseLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E87CF0861B17BE100063994C /* ParseLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87CF0941B17BE100063994C /* Build configuration list for PBXNativeTarget "ParseLoginTests" */;
+			buildPhases = (
+				E87CF0831B17BE100063994C /* Sources */,
+				E87CF0841B17BE100063994C /* Frameworks */,
+				E87CF0851B17BE100063994C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E87CF0891B17BE100063994C /* PBXTargetDependency */,
+			);
+			name = ParseLoginTests;
+			productName = ParseLoginTests;
+			productReference = E87CF0871B17BE100063994C /* ParseLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E87CF06A1B17BE100063994C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Christopher Wainwright Aaron";
+				TargetAttributes = {
+					E87CF0711B17BE100063994C = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					E87CF0861B17BE100063994C = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = E87CF0711B17BE100063994C;
+					};
+				};
+			};
+			buildConfigurationList = E87CF06D1B17BE100063994C /* Build configuration list for PBXProject "ParseLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E87CF0691B17BE100063994C;
+			productRefGroup = E87CF0731B17BE100063994C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E87CF0711B17BE100063994C /* ParseLogin */,
+				E87CF0861B17BE100063994C /* ParseLoginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E87CF0701B17BE100063994C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87CF07D1B17BE100063994C /* Main.storyboard in Resources */,
+				E87CF0821B17BE100063994C /* LaunchScreen.xib in Resources */,
+				E87CF07F1B17BE100063994C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87CF0851B17BE100063994C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E87CF06E1B17BE100063994C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87CF0B51B17C2770063994C /* LoginViewController.swift in Sources */,
+				E87CF07A1B17BE100063994C /* StartViewController.swift in Sources */,
+				E87CF0B71B17C2BE0063994C /* SignUpViewController.swift in Sources */,
+				E87CF0B91B180EC20063994C /* LogoutViewController.swift in Sources */,
+				E87CF0781B17BE100063994C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E87CF0831B17BE100063994C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87CF08E1B17BE100063994C /* ParseLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E87CF0891B17BE100063994C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E87CF0711B17BE100063994C /* ParseLogin */;
+			targetProxy = E87CF0881B17BE100063994C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E87CF07B1B17BE100063994C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E87CF07C1B17BE100063994C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E87CF0801B17BE100063994C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E87CF0811B17BE100063994C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E87CF08F1B17BE100063994C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E87CF0901B17BE100063994C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E87CF0921B17BE100063994C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Bolts.framework/Headers",
+				);
+				INFOPLIST_FILE = ParseLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E87CF0931B17BE100063994C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Bolts.framework/Headers",
+				);
+				INFOPLIST_FILE = ParseLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E87CF0951B17BE100063994C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParseLogin.app/ParseLogin";
+			};
+			name = Debug;
+		};
+		E87CF0961B17BE100063994C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParseLogin.app/ParseLogin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E87CF06D1B17BE100063994C /* Build configuration list for PBXProject "ParseLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87CF08F1B17BE100063994C /* Debug */,
+				E87CF0901B17BE100063994C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87CF0911B17BE100063994C /* Build configuration list for PBXNativeTarget "ParseLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87CF0921B17BE100063994C /* Debug */,
+				E87CF0931B17BE100063994C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E87CF0941B17BE100063994C /* Build configuration list for PBXNativeTarget "ParseLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87CF0951B17BE100063994C /* Debug */,
+				E87CF0961B17BE100063994C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E87CF06A1B17BE100063994C /* Project object */;
+}
