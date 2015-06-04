@@ -16,12 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self circleMake];
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)circleMake {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGRect circleViewRect = CGRectMake(50, 100, 100, 100);
+    
+    UIView * circle = [[UIView alloc] initWithFrame:circleViewRect];
+    
+    circle.backgroundColor = [UIColor blueColor];
+    
+    circle.layer.cornerRadius = 50;
+    
+    [self.view setNeedsDisplay];
+
+}
+
+
 
 @end
