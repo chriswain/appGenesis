@@ -30,8 +30,6 @@
 
 -(void)circleMake {
     
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
     CGRect circleViewRect = CGRectMake(50, 100, 100, 100);
     
     UIView * circle = [[UIView alloc] initWithFrame:circleViewRect];
@@ -40,7 +38,7 @@
     
     circle.layer.cornerRadius = 50;
     
-    [self.view setNeedsDisplay];
+    [self.view addSubview:circle];
 
 }
 

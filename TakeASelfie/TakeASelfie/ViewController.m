@@ -13,6 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
 
+@property (nonatomic) NSString * currentFilter;
+@property (nonatomic) CGFloat currentIntensity;
+
 
 @end
 
@@ -20,12 +23,25 @@
 
 {
     NSArray * filters;
+    UIImage * resizedImage;
+}
+
+-(void)setCurrentIntensity:(CGFloat)currentIntensity {
+    
+    self.imageView.alpha = currentIntensity;
+    
+    _currentIntensity = currentIntensity;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.imageView.image = self.original;
+    self.unfilteredImageView.image = self.original;
+    
+    self.currentIntensity = 1.0;
+    
+    resizedImage = [self imageWithImage:self.original scaledToSize:CGSizeMake(200, 200)];
     
     filters = [CIFilter filterNamesInCategory:kCICategoryColorEffect];
     
@@ -34,11 +50,38 @@
     
 }
 
--(UIImage*)imageWithImage:(UIImage*)image
-              scaledToSize:(CGSize)newSize;
+-(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 {
+    CGRect scaleImageRect = CGRectMake(0, 0, newSize.width, newSize.height);
+    
+    if (newSize.height / newSize.width != image.size.height / image.size.width) {
+        
+        if (image.size.height > image.size.width) {
+            //portrait
+            CGFloat ratio = newSize.width / image.size.width;
+            
+            CGFloat newHeight = ratio * image.size.height;
+            
+            CGFloat newY = (newSize.height - newHeight) / 2;
+            
+            scaleImageRect = CGRectMake(0, newY, newSize.width, newHeight);
+            
+        } else {
+           
+            //landscape
+            CGFloat ratio = newSize.height / image.size.height;
+            
+            CGFloat newWidth = ratio * image.size.width;
+            
+            CGFloat newX = (newSize.width - newWidth) / 2;
+            
+            scaleImageRect = CGRectMake(newX, 0, newWidth, newSize.height);
+        }
+        
+    }
+    
     UIGraphicsBeginImageContext( newSize );
-    [image drawInRect:CGRectMake(0,0, 200,200)];
+    [image drawInRect:scaleImageRect];
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -57,21 +100,48 @@
     
     NSString * filterName = filters[indexPath.item];
     
-    cell.imageViewPic.image = [self filterImage: [self imageWithImage:self.original scaledToSize:(CGSizeMake(200, 200))] withName:filterName];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        
+        UIImage * filterImage = [self filterImage:resizedImage withName:filterName];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            cell.imageViewPic.image = filterImage;
+       
+        });
+        
+        
+    });
+    
+    
     
     return cell;
     
 }
 
+
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString * filterName = filters[indexPath.item];
     
-    UIImage * resizedImage = [self imageWithImage: self.imageView.image scaledToSize:(CGSizeMake(60, 50))];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        UIImage * resetImage = [self imageWithImage:self.original scaledToSize:self.original.size];
+        
+        UIImage * filterImage = [self filterImage:resetImage withName:filterName];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            self.imageView.image = filterImage;
+            
+        });
+        
+        
+    });
+
     
-    UIImage * filterImage = [self filterImage:resizedImage withName:filterName];
-    
-    self.imageView.image = filterImage;
     
     
 }
@@ -96,7 +166,15 @@
 
 }
 
+- (IBAction)goBack:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+- (IBAction)filterIntensityChanged:(UISlider *)sender {
+    
+    self.currentIntensity = sender.value;
+}
 
 @end
 
