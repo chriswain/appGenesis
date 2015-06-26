@@ -33,10 +33,28 @@ class CreateNoteViewController: UIViewController {
     @IBAction func createNote(sender: UIButton) {
         
         if let moc = appDelegate.managedObjectContext {
-            var newObject = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: moc) as! NSManagedObject
             
-            newObject.setValue(createTextField.text, forKey: "content")
-            newObject.setValue(NSDate(), forKey: "date")
+            let catEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: moc)
+            
+            let request = NSFetchRequest()
+            
+            request.entity = catEntity
+            
+            if let catObjects = moc.executeFetchRequest(request, error: nil) as? [NSManagedObject] {
+                
+                var newObject = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: moc) as! NSManagedObject
+                
+                newObject.setValue(createTextField.text, forKey: "content")
+                newObject.setValue(NSDate(), forKey: "date")
+                
+                let catObject = catObjects[0]
+                
+                newObject.setValue(catObject, forKey: "category")
+            
+            }
+            
+            
+            
             
             appDelegate.saveContext()
             

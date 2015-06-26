@@ -10,7 +10,7 @@ import UIKit
 // 2
 // create a function that returns a UIColor based on a string
 
-let DEBUG = true
+let DEBUG = true 
 
 let categories: [String:(String, UIColor)] = [
     

@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FC27BFB1B3C96C8009544A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27BFA1B3C96C8009544A6 /* AppDelegate.swift */; };
+		6FC27BFD1B3C96C8009544A6 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */; };
+		6FC27C001B3C96C8009544A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27BFE1B3C96C8009544A6 /* Main.storyboard */; };
+		6FC27C021B3C96C8009544A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27C011B3C96C8009544A6 /* Images.xcassets */; };
+		6FC27C051B3C96C8009544A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27C031B3C96C8009544A6 /* LaunchScreen.xib */; };
+		6FC27C111B3C96C8009544A6 /* ChatRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C101B3C96C8009544A6 /* ChatRoomTests.swift */; };
+		6FC27C1C1B3CA655009544A6 /* parse-library-1.7.5 in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27C1B1B3CA655009544A6 /* parse-library-1.7.5 */; };
+		6FC27C1E1B3CA6C1009544A6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C1D1B3CA6C1009544A6 /* AudioToolbox.framework */; };
+		6FC27C201B3CA6D0009544A6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C1F1B3CA6D0009544A6 /* CFNetwork.framework */; };
+		6FC27C221B3CA6DF009544A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C211B3CA6DF009544A6 /* CoreGraphics.framework */; };
+		6FC27C241B3CA6E7009544A6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C231B3CA6E7009544A6 /* CoreLocation.framework */; };
+		6FC27C261B3CA6FF009544A6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C251B3CA6FF009544A6 /* MobileCoreServices.framework */; };
+		6FC27C281B3CA70D009544A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C271B3CA70D009544A6 /* QuartzCore.framework */; };
+		6FC27C2A1B3CA713009544A6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C291B3CA713009544A6 /* Security.framework */; };
+		6FC27C2C1B3CA71F009544A6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C2B1B3CA71F009544A6 /* StoreKit.framework */; };
+		6FC27C2E1B3CA729009544A6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C2D1B3CA729009544A6 /* SystemConfiguration.framework */; };
+		6FC27C301B3CA73B009544A6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C2F1B3CA73B009544A6 /* libz.dylib */; };
+		6FC27C321B3CA745009544A6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C311B3CA745009544A6 /* libsqlite3.dylib */; };
+		6FC27C341B3CA7AE009544A6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C331B3CA7AE009544A6 /* Bolts.framework */; };
+		6FC27C361B3CA7B6009544A6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C351B3CA7B6009544A6 /* Parse.framework */; };
+		6FC27C3A1B3CAE2B009544A6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C391B3CAE2B009544A6 /* MessageTableViewCell.swift */; };
+		6FC27C3C1B3CF9AB009544A6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */; };
+		6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */; };
+		6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C401B3DA67F009544A6 /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FC27C0B1B3C96C8009544A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FC27BED1B3C96C8009544A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FC27BF41B3C96C8009544A6;
+			remoteInfo = ChatRoom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FC27BF51B3C96C8009544A6 /* ChatRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC27BF91B3C96C8009544A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC27BFA1B3C96C8009544A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		6FC27BFF1B3C96C8009544A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FC27C011B3C96C8009544A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6FC27C041B3C96C8009544A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6FC27C0A1B3C96C8009544A6 /* ChatRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC27C0F1B3C96C8009544A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC27C101B3C96C8009544A6 /* ChatRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTests.swift; sourceTree = "<group>"; };
+		6FC27C1B1B3CA655009544A6 /* parse-library-1.7.5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.7.5"; sourceTree = "<group>"; };
+		6FC27C1D1B3CA6C1009544A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6FC27C1F1B3CA6D0009544A6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6FC27C211B3CA6DF009544A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6FC27C231B3CA6E7009544A6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6FC27C251B3CA6FF009544A6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6FC27C271B3CA70D009544A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6FC27C291B3CA713009544A6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6FC27C2B1B3CA71F009544A6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6FC27C2D1B3CA729009544A6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6FC27C2F1B3CA73B009544A6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6FC27C311B3CA745009544A6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6FC27C331B3CA7AE009544A6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.7.5/Bolts.framework"; sourceTree = "<group>"; };
+		6FC27C351B3CA7B6009544A6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.5/Parse.framework"; sourceTree = "<group>"; };
+		6FC27C391B3CAE2B009544A6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.7.5/ParseUI.framework"; sourceTree = "<group>"; };
+		6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6FC27C401B3DA67F009544A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FC27BF21B3C96C8009544A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FC27C321B3CA745009544A6 /* libsqlite3.dylib in Frameworks */,
+				6FC27C301B3CA73B009544A6 /* libz.dylib in Frameworks */,
+				6FC27C3C1B3CF9AB009544A6 /* ParseUI.framework in Frameworks */,
+				6FC27C2E1B3CA729009544A6 /* SystemConfiguration.framework in Frameworks */,
+				6FC27C341B3CA7AE009544A6 /* Bolts.framework in Frameworks */,
+				6FC27C2C1B3CA71F009544A6 /* StoreKit.framework in Frameworks */,
+				6FC27C2A1B3CA713009544A6 /* Security.framework in Frameworks */,
+				6FC27C361B3CA7B6009544A6 /* Parse.framework in Frameworks */,
+				6FC27C281B3CA70D009544A6 /* QuartzCore.framework in Frameworks */,
+				6FC27C261B3CA6FF009544A6 /* MobileCoreServices.framework in Frameworks */,
+				6FC27C241B3CA6E7009544A6 /* CoreLocation.framework in Frameworks */,
+				6FC27C221B3CA6DF009544A6 /* CoreGraphics.framework in Frameworks */,
+				6FC27C201B3CA6D0009544A6 /* CFNetwork.framework in Frameworks */,
+				6FC27C1E1B3CA6C1009544A6 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FC27C071B3C96C8009544A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FC27BEC1B3C96C8009544A6 = {
+			isa = PBXGroup;
+			children = (
+				6FC27BF71B3C96C8009544A6 /* ChatRoom */,
+				6FC27C0D1B3C96C8009544A6 /* ChatRoomTests */,
+				6FC27BF61B3C96C8009544A6 /* Products */,
+				6FC27C1A1B3CA604009544A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6FC27BF61B3C96C8009544A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27BF51B3C96C8009544A6 /* ChatRoom.app */,
+				6FC27C0A1B3C96C8009544A6 /* ChatRoomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FC27BF71B3C96C8009544A6 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27BFE1B3C96C8009544A6 /* Main.storyboard */,
+				6FC27C371B3CADA0009544A6 /* Controllers */,
+				6FC27C381B3CADBF009544A6 /* Irregulars */,
+				6FC27C3F1B3D9E66009544A6 /* Regulars */,
+				6FC27BF81B3C96C8009544A6 /* Supporting Files */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		6FC27BF81B3C96C8009544A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27BFA1B3C96C8009544A6 /* AppDelegate.swift */,
+				6FC27C031B3C96C8009544A6 /* LaunchScreen.xib */,
+				6FC27C011B3C96C8009544A6 /* Images.xcassets */,
+				6FC27BF91B3C96C8009544A6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FC27C0D1B3C96C8009544A6 /* ChatRoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27C101B3C96C8009544A6 /* ChatRoomTests.swift */,
+				6FC27C0E1B3C96C8009544A6 /* Supporting Files */,
+			);
+			path = ChatRoomTests;
+			sourceTree = "<group>";
+		};
+		6FC27C0E1B3C96C8009544A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27C0F1B3C96C8009544A6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FC27C1A1B3CA604009544A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27C311B3CA745009544A6 /* libsqlite3.dylib */,
+				6FC27C2F1B3CA73B009544A6 /* libz.dylib */,
+				6FC27C2D1B3CA729009544A6 /* SystemConfiguration.framework */,
+				6FC27C2B1B3CA71F009544A6 /* StoreKit.framework */,
+				6FC27C291B3CA713009544A6 /* Security.framework */,
+				6FC27C271B3CA70D009544A6 /* QuartzCore.framework */,
+				6FC27C251B3CA6FF009544A6 /* MobileCoreServices.framework */,
+				6FC27C231B3CA6E7009544A6 /* CoreLocation.framework */,
+				6FC27C211B3CA6DF009544A6 /* CoreGraphics.framework */,
+				6FC27C1F1B3CA6D0009544A6 /* CFNetwork.framework */,
+				6FC27C331B3CA7AE009544A6 /* Bolts.framework */,
+				6FC27C351B3CA7B6009544A6 /* Parse.framework */,
+				6FC27C1D1B3CA6C1009544A6 /* AudioToolbox.framework */,
+				6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */,
+				6FC27C1B1B3CA655009544A6 /* parse-library-1.7.5 */,
+			);
+			name = Frameworks;
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		6FC27C371B3CADA0009544A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */,
+				6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */,
+				6FC27C401B3DA67F009544A6 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6FC27C381B3CADBF009544A6 /* Irregulars */ = {
+			isa = PBXGroup;
+			children = (
+				6FC27C391B3CAE2B009544A6 /* MessageTableViewCell.swift */,
+			);
+			name = Irregulars;
+			sourceTree = "<group>";
+		};
+		6FC27C3F1B3D9E66009544A6 /* Regulars */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Regulars;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FC27BF41B3C96C8009544A6 /* ChatRoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FC27C141B3C96C9009544A6 /* Build configuration list for PBXNativeTarget "ChatRoom" */;
+			buildPhases = (
+				6FC27BF11B3C96C8009544A6 /* Sources */,
+				6FC27BF21B3C96C8009544A6 /* Frameworks */,
+				6FC27BF31B3C96C8009544A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatRoom;
+			productName = ChatRoom;
+			productReference = 6FC27BF51B3C96C8009544A6 /* ChatRoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FC27C091B3C96C8009544A6 /* ChatRoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FC27C171B3C96C9009544A6 /* Build configuration list for PBXNativeTarget "ChatRoomTests" */;
+			buildPhases = (
+				6FC27C061B3C96C8009544A6 /* Sources */,
+				6FC27C071B3C96C8009544A6 /* Frameworks */,
+				6FC27C081B3C96C8009544A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FC27C0C1B3C96C8009544A6 /* PBXTargetDependency */,
+			);
+			name = ChatRoomTests;
+			productName = ChatRoomTests;
+			productReference = 6FC27C0A1B3C96C8009544A6 /* ChatRoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FC27BED1B3C96C8009544A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Christopher Aaron";
+				TargetAttributes = {
+					6FC27BF41B3C96C8009544A6 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					6FC27C091B3C96C8009544A6 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 6FC27BF41B3C96C8009544A6;
+					};
+				};
+			};
+			buildConfigurationList = 6FC27BF01B3C96C8009544A6 /* Build configuration list for PBXProject "ChatRoom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FC27BEC1B3C96C8009544A6;
+			productRefGroup = 6FC27BF61B3C96C8009544A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FC27BF41B3C96C8009544A6 /* ChatRoom */,
+				6FC27C091B3C96C8009544A6 /* ChatRoomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FC27BF31B3C96C8009544A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FC27C001B3C96C8009544A6 /* Main.storyboard in Resources */,
+				6FC27C051B3C96C8009544A6 /* LaunchScreen.xib in Resources */,
+				6FC27C1C1B3CA655009544A6 /* parse-library-1.7.5 in Resources */,
+				6FC27C021B3C96C8009544A6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FC27C081B3C96C8009544A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FC27BF11B3C96C8009544A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FC27BFD1B3C96C8009544A6 /* ChatRoomViewController.swift in Sources */,
+				6FC27BFB1B3C96C8009544A6 /* AppDelegate.swift in Sources */,
+				6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */,
+				6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */,
+				6FC27C3A1B3CAE2B009544A6 /* MessageTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FC27C061B3C96C8009544A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FC27C111B3C96C8009544A6 /* ChatRoomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FC27C0C1B3C96C8009544A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FC27BF41B3C96C8009544A6 /* ChatRoom */;
+			targetProxy = 6FC27C0B1B3C96C8009544A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6FC27BFE1B3C96C8009544A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC27BFF1B3C96C8009544A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FC27C031B3C96C8009544A6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC27C041B3C96C8009544A6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FC27C121B3C96C9009544A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FC27C131B3C96C9009544A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FC27C151B3C96C9009544A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatRoom/parse-library-1.7.5",
+				);
+				INFOPLIST_FILE = ChatRoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6FC27C161B3C96C9009544A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChatRoom/parse-library-1.7.5",
+				);
+				INFOPLIST_FILE = ChatRoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6FC27C181B3C96C9009544A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChatRoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatRoom.app/ChatRoom";
+			};
+			name = Debug;
+		};
+		6FC27C191B3C96C9009544A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChatRoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatRoom.app/ChatRoom";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FC27BF01B3C96C8009544A6 /* Build configuration list for PBXProject "ChatRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC27C121B3C96C9009544A6 /* Debug */,
+				6FC27C131B3C96C9009544A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FC27C141B3C96C9009544A6 /* Build configuration list for PBXNativeTarget "ChatRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC27C151B3C96C9009544A6 /* Debug */,
+				6FC27C161B3C96C9009544A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6FC27C171B3C96C9009544A6 /* Build configuration list for PBXNativeTarget "ChatRoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC27C181B3C96C9009544A6 /* Debug */,
+				6FC27C191B3C96C9009544A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FC27BED1B3C96C8009544A6 /* Project object */;
+}
