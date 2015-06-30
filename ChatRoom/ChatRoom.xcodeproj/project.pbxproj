@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6FC27BFB1B3C96C8009544A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27BFA1B3C96C8009544A6 /* AppDelegate.swift */; };
-		6FC27BFD1B3C96C8009544A6 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */; };
 		6FC27C001B3C96C8009544A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27BFE1B3C96C8009544A6 /* Main.storyboard */; };
 		6FC27C021B3C96C8009544A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27C011B3C96C8009544A6 /* Images.xcassets */; };
 		6FC27C051B3C96C8009544A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27C031B3C96C8009544A6 /* LaunchScreen.xib */; };
@@ -31,6 +30,8 @@
 		6FC27C3C1B3CF9AB009544A6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */; };
 		6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */; };
 		6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C401B3DA67F009544A6 /* LoginViewController.swift */; };
+		E8FB33641B420237004AB64E /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB33631B420237004AB64E /* ChatRoomViewController.swift */; };
+		E8FB33661B420E7A004AB64E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB33651B420E7A004AB64E /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 		6FC27BF51B3C96C8009544A6 /* ChatRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC27BF91B3C96C8009544A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FC27BFA1B3C96C8009544A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		6FC27BFF1B3C96C8009544A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FC27C011B3C96C8009544A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6FC27C041B3C96C8009544A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -72,6 +72,8 @@
 		6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.7.5/ParseUI.framework"; sourceTree = "<group>"; };
 		6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6FC27C401B3DA67F009544A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8FB33631B420237004AB64E /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		E8FB33651B420E7A004AB64E /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,9 +193,10 @@
 		6FC27C371B3CADA0009544A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6FC27BFC1B3C96C8009544A6 /* ChatRoomViewController.swift */,
 				6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */,
 				6FC27C401B3DA67F009544A6 /* LoginViewController.swift */,
+				E8FB33631B420237004AB64E /* ChatRoomViewController.swift */,
+				E8FB33651B420E7A004AB64E /* EntryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -314,11 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC27BFD1B3C96C8009544A6 /* ChatRoomViewController.swift in Sources */,
 				6FC27BFB1B3C96C8009544A6 /* AppDelegate.swift in Sources */,
 				6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */,
+				E8FB33641B420237004AB64E /* ChatRoomViewController.swift in Sources */,
 				6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */,
 				6FC27C3A1B3CAE2B009544A6 /* MessageTableViewCell.swift in Sources */,
+				E8FB33661B420E7A004AB64E /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +526,7 @@
 				6FC27C161B3C96C9009544A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FC27C171B3C96C9009544A6 /* Build configuration list for PBXNativeTarget "ChatRoomTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				6FC27C191B3C96C9009544A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
