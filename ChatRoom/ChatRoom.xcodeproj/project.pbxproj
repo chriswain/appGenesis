@@ -30,6 +30,7 @@
 		6FC27C3C1B3CF9AB009544A6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */; };
 		6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */; };
 		6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC27C401B3DA67F009544A6 /* LoginViewController.swift */; };
+		E8DBC1A71B42E262000FF9F7 /* ParseRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1A61B42E262000FF9F7 /* ParseRequests.swift */; };
 		E8FB33641B420237004AB64E /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB33631B420237004AB64E /* ChatRoomViewController.swift */; };
 		E8FB33661B420E7A004AB64E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB33651B420E7A004AB64E /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		6FC27C3B1B3CF9AB009544A6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.7.5/ParseUI.framework"; sourceTree = "<group>"; };
 		6FC27C3D1B3D9C62009544A6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6FC27C401B3DA67F009544A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8DBC1A61B42E262000FF9F7 /* ParseRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRequests.swift; sourceTree = "<group>"; };
 		E8FB33631B420237004AB64E /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		E8FB33651B420E7A004AB64E /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				6FC27BFE1B3C96C8009544A6 /* Main.storyboard */,
+				E8DBC1A51B42E122000FF9F7 /* Shinsoo */,
 				6FC27C371B3CADA0009544A6 /* Controllers */,
 				6FC27C381B3CADBF009544A6 /* Irregulars */,
 				6FC27C3F1B3D9E66009544A6 /* Regulars */,
@@ -214,6 +217,14 @@
 			children = (
 			);
 			name = Regulars;
+			sourceTree = "<group>";
+		};
+		E8DBC1A51B42E122000FF9F7 /* Shinsoo */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC1A61B42E262000FF9F7 /* ParseRequests.swift */,
+			);
+			name = Shinsoo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			files = (
 				6FC27BFB1B3C96C8009544A6 /* AppDelegate.swift in Sources */,
 				6FC27C3E1B3D9C62009544A6 /* SignUpViewController.swift in Sources */,
+				E8DBC1A71B42E262000FF9F7 /* ParseRequests.swift in Sources */,
 				E8FB33641B420237004AB64E /* ChatRoomViewController.swift in Sources */,
 				6FC27C411B3DA67F009544A6 /* LoginViewController.swift in Sources */,
 				6FC27C3A1B3CAE2B009544A6 /* MessageTableViewCell.swift in Sources */,
