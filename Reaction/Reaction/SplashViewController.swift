@@ -3,9 +3,10 @@
 import UIKit
 import GameKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: UIViewController, GKGameCenterControllerDelegate {
 
     @IBOutlet weak var topScoreLabel: UILabel!
+    @IBOutlet weak var leaderboard: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,20 @@ class SplashViewController: UIViewController {
             
             navigationController?.viewControllers = [gameVC]
         }
+    }
+    
+    
+    @IBAction func showLeaderboard(sender: UIButton) {
+        
+        let gameVC = GKGameCenterViewController()
+        gameVC.leaderboardIdentifier = "reaction_touched"
+        gameVC.gameCenterDelegate = self
+        presentViewController(gameVC, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+        
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 
 

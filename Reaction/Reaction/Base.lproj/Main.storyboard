@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fR-Li-ZM8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1fR-Li-ZM8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Splash View Controller-->
@@ -40,9 +40,24 @@
                                 <color key="textColor" red="0.99539103835978837" green="0.99539103835978837" blue="0.99539103835978837" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-La-MRa">
+                                <rect key="frame" x="512" y="533" width="80" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="evI-Y2-MiY"/>
+                                    <constraint firstAttribute="height" constant="59" id="yUx-2C-JlE"/>
+                                </constraints>
+                                <state key="normal" image="gamecenter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLeaderboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tWs-H4-PtS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mIK-La-MRa" secondAttribute="bottom" constant="8" id="058-e2-NEV"/>
+                            <constraint firstAttribute="trailing" secondItem="mIK-La-MRa" secondAttribute="trailing" constant="8" id="2Di-gc-dKN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vzl-ws-HTW" secondAttribute="bottom" constant="19" id="2jM-wg-J3x"/>
                             <constraint firstAttribute="trailing" secondItem="Vzl-ws-HTW" secondAttribute="trailing" constant="8" id="LV0-me-lYy"/>
                             <constraint firstItem="Vzl-ws-HTW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="Lpe-YO-WdD"/>
@@ -52,6 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DXq-cg-RcN"/>
                     <connections>
+                        <outlet property="leaderboard" destination="mIK-La-MRa" id="ds4-X3-FnX"/>
                         <outlet property="topScoreLabel" destination="Vzl-ws-HTW" id="0XH-2s-Xxd"/>
                     </connections>
                 </viewController>
@@ -96,4 +112,7 @@
             <point key="canvasLocation" x="152" y="403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gamecenter" width="58" height="59"/>
+    </resources>
 </document>

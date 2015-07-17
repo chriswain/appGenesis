@@ -44,7 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         navigationItem.title = "Venues"
         
-        Crashlytics.sharedInstance().crash()
+    //    Crashlytics.sharedInstance().crash()
         
         
         
